@@ -3,11 +3,124 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>titre</title>
+    <meta name="formulaire simple" content="Page réalisée lors d'un cours du département MMI de Laval, pour initier les
+    étudiants à la création d'un formulaire en respectant les règles d'accessibilité">
+    <title>Cours intégration web | Formulaire simple accessible | BUT MMI |
+        Laval</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
 </head>
 
 <body>
+    <header>
+        <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
+        <h1>Formulaire accessible</h1>
+        <nav>
+            <ul>
+                <li>Structure d'une page Standard
+                    <ul>
+                        <li><a href="index.html">Textes,liens,images,acronymes,citation</a></li>
+                    </ul>
+                </li>
+
+                <li>Formulaire
+                    <ul>
+                        <li><a href="formulaire-simple.html">Formulaire simple</a></li>
+                        <li><a href="formulaire-complexe.html">Formulaire complexe</a></li>
+                    </ul>
+                </li>
+
+                <li>Médias audiovisuels
+                    <ul>
+                        <li><a href="video.html">Vidéo</a></li>
+                    </ul>
+                </li>
+                <li>Tableau
+                    <ul>
+                        <li><a href="tableau-simple.html">Tableau simple</a></li>
+                        <li><a href="tableau-complexe.html">Tableau complexe</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section>
+            <h2>Explication</h2>
+            <p>Les formulaires sont constitués d'un ensemble d'éléments. <strong>form</strong> est la balise principale,
+                c'est grâce à elle que l'on définit le formulaire, elle contient toutes les autres balises permettant la
+                récolte d'informations auprès de l'internaute. Elle doit obligatoirement disposer d'un attribut
+                <strong>action</strong> indiquant à quel programme les données récoltées seront transmises.
+            </p>
+
+            <p>Chaque information demandée est libellée via un élément <strong>label</strong>. La saisie en elle-même
+                est
+                mise en place à l'aide de la balise <strong>input</strong> pour la grande majorité des champs, la balise
+                <strong>select</strong> pour une liste déroulante, la balise <strong>textarea</strong> pour la saisie
+                d'un
+                texte multilignes. L'attribut <strong>type</strong> de la balise input permet de préciser le type de
+                saisie
+                attendue : champ de texte, bouton radio, case à cocher, dépot de fichier, mot de passe, etc. La balise
+                <strong>option</strong> permet de définir les entrées d'une liste déroulante. Le ou les libellés ainsi
+                que
+                le ou les champs de saisie liés à une même information sont regroupés, dans une même boîte, à l'aide des
+                balises <strong>fieldset</strong> et/ou <strong>div</strong>.
+            </p>
+
+            <p>Pour garantir <strong>l'accessibilité du formulaire</strong> ainsi que <strong>son ergonomie</strong>,
+                l'élément <strong>label</strong> doit être relié au champ de saisie qu'il libelle via l'attribut
+                <strong>for</strong>. Cet attribut doit avoir la même valeur que <strong>l'attribut id du champ de
+                    saisie</strong> (input/select/textarea).
+            </p>
+
+            <p>La validation du formulaire est mise en oeuvre à l'aide d'un élément <strong> input de type submit ou
+                    image</strong> ou d'un élément <strong>button</strong>. L'information est transmise au programme
+                receveur sous forme <strong>d'un nom et d'une valeur</strong>. Tout élément que l'on veut transmettre
+                doit
+                donc disposer d'un attribut <strong>name</strong>. La valeur d'un champ que l'utilisateur renseigne est
+                fournie par cette saisie mais pour tout élément non saisissable (bouton radio, case à cocher, liste
+                déroulante, etc) c'est à vous d'indiquer, via l'attribut <strong>value</strong>, la valeur que vous
+                souhaitez associer à la sélection de l'élément.</p>
+
+            <p>La saisie de tout champ peut être rendue obligatoire grâce à l'attribut <strong>required</strong>. La
+                validation du formulaire ne sera pas possible tant que les champs obligatoires ne seront pas renseignés.
+                L'attribut <strong>checked</strong> permet de cocher par défaut un bouton radio ou une case à cocher,
+                l'attribut <strong>selected</strong> permet de présélectionner une option de la liste déroulante.</p>
+        </section>
+
+        <section>
+            <h2>Exemple</h2>
+            <form action="recevoir-donnees-formulaire.html" method="get">
+                <div>
+                    <label for="nom">Nom :</label>
+                    <input type="text" name="prenom" id="nom" required>
+                </div>
+                <div>
+                    <label for="prenom">Prenom :</label>
+                    <input type="text" name="prenom" id="prenom" required>
+                </div>  
+                <div>
+                    <label for="Filière">Filière suivie :</label>
+                    <select name="Filière suivie" id="Filière" multiple size="1">
+                        <option value="">étudiant MM1</option>
+                        <option value="">MM2</option>
+                        <option value="">MMI2 ALT</option>
+                        <option value="">MMI3</option>
+                        <option value="">MMI3 ALT</option>
+
+                    </select>
+                        
+                </div>
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>Exercice réalisé au département <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr> de l'IUT de
+            Laval
+            dans le cadre du cours d'intégration web.</p>
+    </footer>
 
 </body>
 
