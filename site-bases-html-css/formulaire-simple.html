@@ -93,24 +93,61 @@
             <form action="recevoir-donnees-formulaire.html" method="get">
                 <div>
                     <label for="nom">Nom :</label>
-                    <input type="text" name="prenom" id="nom" required>
+                    <input type="text" name="nom" id="nom" required>
                 </div>
                 <div>
                     <label for="prenom">Prenom :</label>
                     <input type="text" name="prenom" id="prenom" required>
-                </div>  
-                <div>
-                    <label for="Filière">Filière suivie :</label>
-                    <select name="Filière suivie" id="Filière" multiple size="1">
-                        <option value="">étudiant MM1</option>
-                        <option value="">MM2</option>
-                        <option value="">MMI2 ALT</option>
-                        <option value="">MMI3</option>
-                        <option value="">MMI3 ALT</option>
-
-                    </select>
-                        
                 </div>
+                <div>
+                    <label for="Filiere">Filière suivie: </label>
+
+                    <select name="Filiere_suivie" id="Filiere">
+                        <option value="mmi_1">étudiant MM1</option>
+                        <option value="mmi_2" selected> étudiant MMI2</option>
+                        <option value="mmi_2_alt">étudiant MMI2 ALT</option>
+                        <option value="mmi_3">étudiant MMI3</option>
+                        <option value="mmi_3_alt">étudiant MMI3 ALT</option>
+                    </select>
+                </div>
+                <fieldset>
+                    <legend>Quel parcours souhaitez-vous poursuivre ?</legend>
+
+                    <input type="radio" id="dev" name="parcours" value="dev" required>
+                    <label for="dev">Développement web et dispositufs intéractifs</label>
+                    
+                    <input type="radio" id="strat" name="parcours" value="strat" required>
+                    <label for="strat">stratégie de communication numérique et design d'expérience</label>
+
+                    <input type="radio" id="crea" name="parcours" value="crea" required>
+                    <label for="crea">Création numérique</label>
+                </fieldset>
+                <fieldset>
+                    <legend>Par quel moyen de transport venez-vous à l'IUT ?</legend>
+
+                    <input type="checkbox" id="voiture" name="transport[]" value="voiture">
+                    <label for="voiture">Voiture</label>
+                    
+                    <input type="checkbox" id="bus" name="transport[]" value="bus">
+                    <label for="bus">Bus</label>
+
+                    <input type="checkbox" id="train" name="transport[]" value="train">
+                    <label for="train">Train</label>
+
+                    <input type="checkbox" id="pied" name="transport[]" value="pied" checked>
+                    <label for="pied">À pied</label>
+
+                    <input type="checkbox" id="velo" name="transport[]" value="velo">
+                    <label for="velo">En vélo</label>
+
+                    <input type="checkbox" id="trott" name="transport[]" value="trott">
+                    <label for="trott">en trottinette</label>
+                </fieldset>
+                <div>
+                    <label for="commentaire">commentaires</label>
+                    <textarea id="commentaire" name="commentaire" rows="5" cols="50" required></textarea>
+                </div>
+                <input type="submit" value="valider" >
             </form>
 
         </section>
