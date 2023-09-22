@@ -114,24 +114,24 @@
 
                     <div>
                         <label for="mail">Email</label>
-                        <input type="email" id="mail" name="Email_" required>
+                        <input type="email" id="mail" name="Email" required>
                     </div>
                     <div>
                         <label for="mdp">Mot de passe</label>
-                        <input type="password" id="mdp" name="mdp_" placeholder="6 caractères minimum" required>
+                        <input type="password" id="mdp" name="mdp" placeholder="6 caractères minimum" required>
                     </div>
                     <div>
                         <label for="pho">photo</label>
-                        <input type="file" id="pho" name="photo_" accept="image/png, image/jpeg" />
+                        <input type="file" id="pho" name="photo" accept="image/png, image/jpeg" />
                     </div>
                     <div>
                         <label for="date">Date</label>
-                        <input type="date" id="date" name="date_" value="AAAA-MM-JJ" min="1980-09-01"
+                        <input type="date" id="date" name="date" value="AAAA-MM-JJ" min="1980-09-01"
                             max="2022-09-01" required />
                     </div>
                     <div>
                         <label for="bac">Années d'étude après le bac</label>
-                        <input type="number" id="bac" name="années_post_bac_" min="1" max="10" />
+                        <input type="number" id="bac" name="annéesPostBac" min="1" max="10" />
                     </div>
                     <div>
                         <label for="color">Couleur</label>
@@ -141,7 +141,20 @@
                 <fieldset>
                      <legend>HTML-CSS</legend>
                      <div>
-                        <label for="niv">Niveau en HTML (1à10)</label>
+                        <label for="niv">Niveau en HTML (1 à 10)</label>
+                        <input type="range" list="niv" min="1" max="10">
+                        <datalist>
+                            <option value="1"></option>
+                            <option value="2"></option>
+                            <option value="3"></option>
+                            <option value="4"></option>
+                            <option value="5"></option>
+                            <option value="6"></option>
+                            <option value="7"></option>
+                            <option value="8"></option>
+                            <option value="9"></option>
+                            <option value="10"></option>  
+                        </datalist>
                      </div>
                 </fieldset>
             </form>
