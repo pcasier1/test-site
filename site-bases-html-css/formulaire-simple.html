@@ -100,14 +100,14 @@
                     <input type="text" name="prenom" id="prenom" required>
                 </div>
                 <div>
-                    <label for="Filiere">Filière suivie: </label>
+                    <label for="filiere">Filière suivie: </label>
 
-                    <select name="Filiere_suivie" id="Filiere">
-                        <option value="mmi_1">étudiant MM1</option>
-                        <option value="mmi_2" selected> étudiant MMI2</option>
-                        <option value="mmi_2_alt">étudiant MMI2 ALT</option>
-                        <option value="mmi_3">étudiant MMI3</option>
-                        <option value="mmi_3_alt">étudiant MMI3 ALT</option>
+                    <select name="filiereSuivie" id="filiere">
+                        <option value="mmi1">étudiant MM1</option>
+                        <option value="mmi2" selected> étudiant MMI2</option>
+                        <option value="mmi2alt">étudiant MMI2 ALT</option>
+                        <option value="mmi3">étudiant MMI3</option>
+                        <option value="mmi3alt">étudiant MMI3 ALT</option>
                     </select>
                 </div>
                 <fieldset>
@@ -115,7 +115,7 @@
 
                     <input type="radio" id="dev" name="parcours" value="dev" required>
                     <label for="dev">Développement web et dispositufs intéractifs</label>
-                    
+
                     <input type="radio" id="strat" name="parcours" value="strat" required>
                     <label for="strat">stratégie de communication numérique et design d'expérience</label>
 
@@ -127,7 +127,7 @@
 
                     <input type="checkbox" id="voiture" name="transport[]" value="voiture">
                     <label for="voiture">Voiture</label>
-                    
+
                     <input type="checkbox" id="bus" name="transport[]" value="bus">
                     <label for="bus">Bus</label>
 
@@ -147,7 +147,9 @@
                     <label for="commentaire">commentaires</label>
                     <textarea id="commentaire" name="commentaire" rows="5" cols="50" required></textarea>
                 </div>
-                <input type="submit" value="valider" >
+                <div>
+                    <input type="submit" value="valider">
+                </div>
             </form>
 
         </section>
