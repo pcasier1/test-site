@@ -3,11 +3,159 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>titre</title>
+    <meta name="description" content="Page réalisée pour initier les étudiants à la création de formulaire intégrant
+    des widgets HTML5 facilitant l'ergonomie et la saisie des informations">
+
+    <title>Cours intégration web | Formulaire avec éléments HTML5|BUT MMI|Laval</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
 </head>
 
 <body>
+    <header>
+        <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
+        <h1>Les éléments de base d'une page web(structuration, titrage, image, texte, lien, etc)</h1>
+
+    </header>
+    <nav>
+        <ul>
+
+            <li>Structure d'une page Standard
+                <ul>
+                    <li><a href="index.html">Textes,liens,images,acronymes,citation</a></li>
+                </ul>
+            </li>
+
+            <li>Formulaire
+                <ul>
+                    <li><a href="formulaire-simple.html">Formulaire simple</a></li>
+                    <li><a href="formulaire-complexe.html">Formulaire complexe</a></li>
+                </ul>
+            </li>
+
+            <li>Médias audiovisuels
+                <ul>
+                    <li><a href="video.html">Vidéo</a></li>
+                </ul>
+            </li>
+            <li>Tableau
+                <ul>
+                    <li><a href="tableau-simple.html">Tableau simple</a></li>
+                    <li><a href="tableau-complexe.html">Tableau complexe</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Explication</h2>
+            <p>
+                Depuis HTML5, nous disposons de nouvelles catégories d'input: <strong>date, email, number, range, tel,
+                    url,
+                    color</strong>. Ils permettent de disposer de "widgets" déjà définis facilitant la saisie
+                pour les utilisateurs. Ses nouveaux inputs s'adaptent aussi à l'outil utilisé pour l'affichage du site.
+                Par exemple, le clavier de certains téléphones portables basculera sur un clavier "pavé numérique" pour
+                un input de type tel.
+            </p>
+            <p>
+                De même, de nouveaux attributs facilitent la saisie ou la vérification de celle-ci:
+                <strong>placeholder</strong> permet d'afficher un message à l'intérieur du champ. Celui-ci s'effacera
+                dès que le champ sera saisi. Attention placeholder ne doit pas se substituer à l'élément label. Si
+                vraiment, vous souhaitez supprimer le label pour des raisons esthétiques ,il faut à minima remplacer le
+                label par l'attribut <strong>aria-label</strong> afin que les lecteurs d'écrans puissent lire le libellé
+                du champ avant d'en demander la saisie. Malgré tout, éviter au maximum la suppression des labels.
+            </p>
+
+            <p>En plus de l'attribut <strong>required</strong>, d'autres attributs permettent d'affiner les controles de
+                saisies
+            </p>
+
+            <ul>
+                <li><strong>min</strong> permet, pour les champs date, number ou range, d'indiquer une valeur minimale.
+                    Pour les dates, la valeur doit être fournie sous la forme AAAA-MM-JJ
+                </li>
+
+                <li><strong>max</strong> permet de même, pour les champs date, number ou range d'indiquer une valeur
+                    maximale.
+                </li>
+
+                <li><strong>step</strong> disponible pour les champs range et number, permet de définir l'incrément du
+                    champ c'est à dire la manière dont la valeur évolue (de 1 en 1, de 2 en 2, etc).
+                </li>
+
+                <li><strong>pattern</strong> permet de définir de manière précise le format de saisie attendue via une
+                    expression régulière. Nous verrons comment l'utiliser lors du cours javascript.
+                </li>
+            </ul>
+
+            <p>
+                On peut associer à des zones de texte, d'email, ou d'url, des éléments <strong>datalist</strong> composé
+                d'éléments <strong>option</strong> afin que l'internaute dispose de listes pre-renseignées dans
+                lesquelles
+                il
+                pourra faire un choix. Contrairement à une liste déroulante, il pourra aussi saisir une valeur qui n'est
+                pas
+                proposée dans la liste.
+            </p>
+
+            <p>Enfin, on peut aussi transmettre un fichier via un input de type <strong>file</strong>. Lors de la
+                validation,
+                le fichier sera envoyé au programme serveur en même temps que les informations textuelles.
+                Pour que cela fonctionne correctement il faut ajouter, dans la balise form, l'attribut
+                <strong>enctype="multipart/form-data"</strong>.
+            </p>
+        </section>
+
+        <section>
+            <form action="recevoir-donnees-formulaire.html" method="get" enctype="multipart/form-data">
+                <fieldset>
+
+                    <legend>informationtions personnelles</legend>
+
+                    <div>
+                        <label for="mail">Email</label>
+                        <input type="email" id="mail" name="Email_" required>
+                    </div>
+                    <div>
+                        <label for="mdp">Mot de passe</label>
+                        <input type="password" id="mdp" name="mdp_" placeholder="6 caractères minimum" required>
+                    </div>
+                    <div>
+                        <label for="pho">photo</label>
+                        <input type="file" id="pho" name="photo_" accept="image/png, image/jpeg" />
+                    </div>
+                    <div>
+                        <label for="date">Date</label>
+                        <input type="date" id="date" name="date_" value="AAAA-MM-JJ" min="1980-09-01"
+                            max="2022-09-01" required />
+                    </div>
+                    <div>
+                        <label for="bac">Années d'étude après le bac</label>
+                        <input type="number" id="bac" name="années_post_bac_" min="1" max="10" />
+                    </div>
+                    <div>
+                        <label for="color">Couleur</label>
+                        <input type="color" id="col" name="couleur_" value="#FF0000" />
+                    </div>
+                </fieldset>
+                <fieldset>
+                     <legend>HTML-CSS</legend>
+                     <div>
+                        <label for="niv">Niveau en HTML (1à10)</label>
+                     </div>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+
+
+
+    <footer>
+        <p>Exercice réalisé au département <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr> de l'IUT de
+            Laval
+            dans le cadre du cours d'intégration web.</p>
+    </footer>
 
 </body>
 
