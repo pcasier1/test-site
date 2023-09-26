@@ -3,11 +3,125 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>titre</title>
+    <meta name="description" content="Page réalisée pour initier les étudiants à l'intégration de vidéo interne
+    au site ou sur youtube. Différents codec (encodage) sont proposés">
+
+    <title>Cours intégration web | Vidéos | BUT MMI | Laval</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
 </head>
 
 <body>
+    <header>
+        <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
+        <h1>Eléments audiovisuels : vidéo</h1>
+
+    </header>
+    <nav>
+        <ul>
+
+            <li>Structure d'une page Standard
+                <ul>
+                    <li><a href="index.html">Textes,liens,images,acronymes,citation</a></li>
+                </ul>
+            </li>
+
+            <li>Formulaire
+                <ul>
+                    <li><a href="formulaire-simple.html">Formulaire simple</a></li>
+                    <li><a href="formulaire-complexe.html">Formulaire complexe</a></li>
+                </ul>
+            </li>
+
+            <li>Médias audiovisuels
+                <ul>
+                    <li><a href="video.html">Vidéo</a></li>
+                </ul>
+            </li>
+            <li>Tableau
+                <ul>
+                    <li><a href="tableau-simple.html">Tableau simple</a></li>
+                    <li><a href="tableau-complexe.html">Tableau complexe</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Explication</h2>
+            <p>
+                On utilise la balise <strong>video</strong> pour intégrer une vidéo à la page. Si l'on veut être certain
+                qu'elle puisse être lue par tous les navigateurs supportant le HTML5, il faut la fournir sous différents
+                formats(mp4,ogv,webm). Il faut donc définir une balise <strong>source</strong> pour chaque format. Voir
+                le
+                site caniuse pour identifier les codecs supportés par chaque version de navigateur. Malgré tout, à
+                l'heure
+                actuelle le codec le mieux supporté est le h264 (mpeg4)</p>
+            <p>
+                Différents attributs permettent de "paramétrer" la diffusion dans le navigateur:
+                <strong>autoplay</strong>
+                permet la lecture immédiate de la vidéo, <strong>controls</strong> permet d'avoir un lecteur associé à
+                la
+                vidéo (pour mettre en pause, arrêter, lire, ..), <strong>preload="none" ou preload="metadata" ou
+                    preload="auto"</strong> permet de gérer le préchargement de la vidéo (s'il n'est pas en autoplay) et
+                donc d'avoir ou non un pré-chargement en mémoire. Souvent, on choisira preload="metadata" afin de ne pas
+                charger inutilement une vidéo si l'utilisateur ne demande pas à la visualiser mais en ayant malgré tout
+                des
+                informations par exemple sur sa durée, ses dimensions, etc. Enfin <strong>loop</strong> permet de jouer
+                la
+                vidéo en boucle.
+            </p>
+            <p>
+                Enfin une autre solution pour diffuser des vidéos, consiste à héberger sa vidéo sur un site externe
+                (youtube
+                ou vimeo pour les plus connus) et à intégrer la vidéo via une balise iframe qui permet de charger le
+                contenu
+                d'une page HTML à l'intérieur d'une autre page html et de préciser son adresse via l'attribut
+                <strong>src</strong>.
+            </p>
+
+        </section>
+        <section>
+            <h2>Exemples</h2>
+            <article>
+                <h3>Vidéo en lecture automatique sans lecteur</h3>
+                <figure>
+                    <video src="videos/pub-mmi1.mp4" autoplay muted loop></video>
+                    <figcaption>spot pub réalisé en 1ere année de DUT MMI</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>Vidéo proposé avec différents formats d'encodage et un lecteur</h3>
+                <figure>
+                    <video preload="metadata" controls poster="images/poster-video.png">
+                        <source src="videos/pub-mmi1.webm">
+                        <source src="videos/pub-mmi1.mp4">
+                    </video>
+                    <figcaption>spot pub réalisé en 1ere année de DUT MMI</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>Vidéo sans aucun préchargement d'information</h3>
+                <figure>
+                    <video preload="none" controls>
+                        <source src="videos/pub-mmi1.mp4">
+                    </video>
+                    <figcaption>spot pub réalisé en 1ere année de DUT MMI</figcaption>
+                </figure>
+            </article>
+            <article>
+                <h3>Vidéo YouTube</h3>
+                <figure>
+                    <iframe src="https://www.youtube.com/embed/-kdaJXjgu8M" width="854" height="480"></iframe>
+                    <figcaption>Clip vidéo ayant gagné un prix au festival MMI</figcaption>
+                </figure>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Exercice réalisé au département <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr> de l'IUT de
+            Laval
+            dans le cadre du cours d'intégration web.</p>
+    </footer>
 
 </body>
 
