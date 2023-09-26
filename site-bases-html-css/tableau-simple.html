@@ -3,12 +3,130 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>titre</title>
+    <meta name="description" content="Page réalisée lors d'un cours du département MMI de Laval, pour initier les
+    étudiants à la création d'un tableau en respectant les règles d'accessibilité.">
+
+    <title>Cours intégration web | Tableau simple accessible | BUT MMI | Laval</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
 </head>
 
 <body>
+    <header>
+        <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
+        <h1>Tableau simple et accessible</h1>
 
+    </header>
+    <nav>
+        <ul>
+
+            <li>Structure d'une page Standard
+                <ul>
+                    <li><a href="index.html">Textes,liens,images,acronymes,citation</a></li>
+                </ul>
+            </li>
+
+            <li>Formulaire
+                <ul>
+                    <li><a href="formulaire-simple.html">Formulaire simple</a></li>
+                    <li><a href="formulaire-complexe.html">Formulaire complexe</a></li>
+                </ul>
+            </li>
+
+            <li>Médias audiovisuels
+                <ul>
+                    <li><a href="video.html">Vidéo</a></li>
+                </ul>
+            </li>
+            <li>Tableau
+                <ul>
+                    <li><a href="tableau-simple.html">Tableau simple</a></li>
+                    <li><a href="tableau-complexe.html">Tableau complexe</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Explication</h2>
+            <p>
+                Comme pour les formulaires, décrire un tableau nécessite d'utiliser un grand nombre de balises
+                structurantes.
+            </p>
+            <p>
+                <strong>table </strong>indique que l'on intègre un tableau, <strong>caption </strong> permet de définir
+                le
+                titre du tableau. C'est obligatoirement le premier élément de table.<strong>colgroup</strong> et
+                <strong>
+                    col</strong> permettent d'indiquer le nombre de colonnes du tableau. Sans cela, le navigateur doit
+                "compter" tout seul combien chaque ligne contient de cellules. C'est donc une bonne pratique de lui
+                donner
+                cette information.
+            </p>
+            <p>
+                <strong>thead, tbody, tfoot</strong> (entête, corps et pied du tableau) permettent de distinguer les
+                différentes parties du tableau. Ce sont donc des balises structurantes qui sont aussi utilisées lors de
+                l'impression de la page. En effet thead et tfoot seront systématiquement reproduites sur chaque page
+                nécessaire pour l'impression du tableau. Tousles tableaux n'ont pas obligatoirement un pied mais ils ont
+                tous une entête et un corps.
+            </p>
+            <p>
+                Enfin pour chaque partie, on décrit les lignes du tableau via la balise <strong>tr</strong>. Toute
+                partie
+                doit au minimum contenir une ligne sinon elle n'a pas lieu d'exister. Enfin pour chaque ligne, on décrit
+                les
+                cellules du tableau: <strong>th</strong> permet de décrire les cellules d'entête,<strong> td</strong>
+                les
+                cellules de contenu. Toutes les lignes doivent avoir le même nombre de cellules.
+            </p>
+        </section>
+        <section>
+            <h2>Exemple</h2>
+            <table border="1">
+                <caption>Parts de marché des navigateurs web sur desktop en France -avril 2022 - <a href="https://www.leptidigital.fr/webmarketing/parts-de-marche-
+                        navigateurs-web-10814">leptidigital</a></caption>
+                <colgroup>
+                    <col span="2">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th>Navigateur</th>
+                        <th>Part de marché</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Chrome</td>
+                        <td>57,13%</td>
+                    </tr>
+                    <tr>
+                        <td>Firefox</td>
+                        <td>16,36%%</td>
+                    </tr>
+                    <tr>
+                        <td>Edge</td>
+                        <td>11,74%</td>
+                    </tr>
+                    <tr>
+                        <td>Safari</td>
+                        <td>10,34%</td>
+                    </tr>
+                    <tr>
+                        <td>Opéra</td>
+                        <td>2,61%</td>
+                    </tr>
+                    <tr>
+                        <td>Internet explorer</td>
+                        <td>0,88%</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>Exercice réalisé au département <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr> de l'IUT de
+            Laval
+            dans le cadre du cours d'intégration web.</p>
+    </footer>
 </body>
 
 </html>
