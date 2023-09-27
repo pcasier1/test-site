@@ -3,10 +3,135 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Page réalisée lors d'un cours du département MMI de Laval, pour initier les
+    étudiants à la création d'un tableau à double entrée et regroupement de cellules.">
+
+    <title>Cours intégration web | Tableau à double entrée | BUT MMI | Laval</title>
+    <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
 </head>
 
 <body>
+    <header>
+        <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
+        <h1>Tableau à double entrée</h1>
+
+    </header>
+    <nav>
+        <ul>
+
+            <li>Structure d'une page Standard
+                <ul>
+                    <li><a href="index.html">Textes,liens,images,acronymes,citation</a></li>
+                </ul>
+            </li>
+
+            <li>Formulaire
+                <ul>
+                    <li><a href="formulaire-simple.html">Formulaire simple</a></li>
+                    <li><a href="formulaire-complexe.html">Formulaire complexe</a></li>
+                </ul>
+            </li>
+
+            <li>Médias audiovisuels
+                <ul>
+                    <li><a href="video.html">Vidéo</a></li>
+                </ul>
+            </li>
+            <li>Tableau
+                <ul>
+                    <li><a href="tableau-simple.html">Tableau simple</a></li>
+                    <li><a href="tableau-complexe.html">Tableau complexe</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Explication</h2>
+            <p>
+                Les tableaux doivent être <strong>accessibles</strong>: ils sont compréhensibles par des personnes
+                non-voyantes lorsqu'ils sont lus par des lecteurs d'écrans.
+            </p>
+            <p>
+                L'utilisation d'éléments th pour décrire les cellules d'entête est indispensable.
+                Lorsqu'on est face à des tableaux complexes à double entrée (chaque cellule possède plusieurs entêtes),
+                il
+                est nécessaire d'indiquer si la cellule d'entête est une cellule de ligne ou de colonne. Cela se fait
+                par
+                l'utilisation de l'attribut <strong> scope="col|row" </strong>sur chaque cellule th. Le lecteur d'écran
+                lira
+                alors systématiquement le contenu de ces cellules avant de lire celui d'une cellule de contenu.
+                Pour des tableaux encore plus complexes, avec plusieurs entrées possibles, on utilise l'attribut
+                <strong>
+                    headers="idReference1 idReference2 idReference3"</strong>. Cela permet de lier une cellule de
+                contenu à
+                plusieurs cellules d'en-tête identifiées par des ids.
+            </p>
+            <p>
+                Les attributs <strong>colspan</strong> et <strong>rowspan</strong> permettent de regrouper des cellules
+                soit
+                horizontalement (colspan), soit verticalement (rowspan).
+            </p>
+        </section>
+        <section>
+            <h2>Exemple</h2>
+            <table border="1">
+                <caption>Effectif IUT de Laval année 2022-2023</caption>
+                <colgroup>
+                    <col span="4">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="colgroup" colspan="2">Formaton</th>
+                        <th scope="col">Voie Classique</th>
+                        <th scope="col">Voie Alternace</th>
+                    </tr>
+
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" rowspan="4">BUT</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">MMI1</th>
+                        <td>78</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MMI2</th>
+                        <td>48</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">MMI3</th>
+                        <td>0</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <th scope="row" rowspan="2">LP</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">DIWA</th>
+                        <td>0</td>
+                        <td>11</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="4">Effectif total: 161 étudinats</td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>Exercice réalisé au département <abbr title="Métiers du Multimédia et de l'Internet">MMI</abbr> de l'IUT de
+            Laval
+            dans le cadre du cours d'intégration web.</p>
+    </footer>
 
 </body>
 
