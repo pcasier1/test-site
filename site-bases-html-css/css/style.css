@@ -1,13 +1,51 @@
 body {
     background-color: rgb(250, 249, 249);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
 }
 
-h1,h2,h3,nav {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+/*header*/
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-/* Titre */
+
+/*Menu nav*/
+nav>ul>li{
+    list-style-image: url(/css/images/puce2.png);
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+nav>ul>li>ul>li{
+    list-style-image: url(/css/images/puce1.png);
+    font-size: 16px;
+    font-style: italic;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+nav a{
+    border-bottom: none;
+    color: black;
+}
+
+/*main*/
+main{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+main section{
+    margin-bottom: 40px;
+}
+
+/* indication de titre */
+
+nav,h1,h2,h3{
+    font-family: Verdana, Tahoma, sans-serif;
+}
 
 h1 {
     text-transform: uppercase;
@@ -15,18 +53,46 @@ h1 {
     text-align: center;
     size: 26px;
     background-color: #e6007e;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    margin-bottom: 0px;
+    margin-top: 15px;
 }
 
 h2 {
     color: #194887;
 }
 
-.body:not(:last-child) {
-    text-indent: 20px;
-}
-
+/*indication texte*/
 strong {
     color: #0582a0;
 }
+blockquote>strong{
+    color: #ce91e2;
+}
+p img{
+    vertical-align: middle;
+}
+li{
+    list-style-type: square;
+}
+abbr{
+    font-style: italic;
+}
 
-/*header*/
+/*sauf le footer*/
+main p {
+    text-indent: 20px;
+}
+
+/*footer*/
+footer{
+    background-color: rgba(41,56,120,0.9);
+    border-top: 3px solid #e6007e;
+    color: white;
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
