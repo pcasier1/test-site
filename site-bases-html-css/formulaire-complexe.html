@@ -8,6 +8,7 @@
 
     <title>Cours intégration web | Formulaire avec éléments HTML5|BUT MMI|Laval</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
+    <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
 
 <body>
@@ -111,7 +112,7 @@
             <form action="recevoir-donnees-formulaire.html" method="get" enctype="multipart/form-data">
                 <fieldset>
 
-                    <legend>informationtions personnelles</legend>
+                    <legend class="color2">informationtions personnelles</legend>
 
                     <div>
                         <label for="mail">Email</label>
@@ -138,8 +139,8 @@
                         <input type="color" id="col" name="couleur_" value="#FF0000" />
                     </div>
                 </fieldset>
-                <fieldset>
-                    <legend>HTML-CSS</legend>
+                <fieldset class="mt-20">
+                    <legend class="color2">HTML-CSS</legend>
                     <div>
                         <label for="niv">Niveau en HTML (1 à 10)</label>
                         <input type="range" id="niv" min="1" max="10">
@@ -155,7 +156,7 @@
                         </datalist>
                     </div>
                 </fieldset>
-                <div>
+                <div class="right" class="mt-20">
                     <button type="submit" value="valider"><img src="images/validation.png" alt="valider"></button>
                 </div>
             </form>
