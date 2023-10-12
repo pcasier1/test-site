@@ -162,6 +162,10 @@ input[type=checkbox] {
     margin-left: 25px;
 }
 
+input:checked+label {
+    font-weight: bold;
+}
+
 .mt-20 {
     margin-top: 20px;
 }
@@ -171,4 +175,23 @@ input[type=submit] {
     margin: 0px;
     border: 0px;
     background-color: none;
+}
+
+input:invalid{
+    background-color: rgba(255,0,0,0.1);
+}
+
+.boutonSimple {
+    border-radius: 10px;
+    background-color: #e6007e;
+    color: white;
+    font-size: 16px;
+    padding: 10px;
+}
+button[type=submit]:active,
+input[type=submit]:active {
+    box-shadow: 5px 3px 3px rgba(0,0,0,0.5);
+}
+.bouttonComplexe {
+    border-radius: 100%;
 }
