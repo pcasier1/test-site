@@ -5,12 +5,16 @@
     <meta charset="UTF-8">
     <meta name="description" content="Page réalisée pour initier les étudiants à l'intégration de vidéo interne
     au site ou sur youtube. Différents codec (encodage) sont proposés">
-
     <title>Cours intégration web | Vidéos | BUT MMI | Laval</title>
     <link rel="shortcut icon" href="/images/favicon.ico" type="images/x-icon">
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400&display=swap"
+        rel="stylesheet">
 </head>
 
-<body>
+<body class="videoPage">
     <header>
         <img src="/images/logo-iut.png" alt="IUT de Laval - Le Mans Université">
         <h1>Eléments audiovisuels : vidéo</h1>
@@ -84,14 +88,14 @@
             <h2>Exemples</h2>
             <article>
                 <h3>Vidéo en lecture automatique sans lecteur</h3>
-                <figure>
+                <figure class="video1">
                     <video src="videos/pub-mmi1.mp4" autoplay muted loop></video>
                     <figcaption>spot pub réalisé en 1ere année de DUT MMI</figcaption>
                 </figure>
             </article>
             <article>
                 <h3>Vidéo proposé avec différents formats d'encodage et un lecteur</h3>
-                <figure>
+                <figure class="video2">
                     <video preload="metadata" controls poster="images/poster-video.png">
                         <source src="videos/pub-mmi1.webm">
                         <source src="videos/pub-mmi1.mp4">
@@ -101,7 +105,7 @@
             </article>
             <article>
                 <h3>Vidéo sans aucun préchargement d'information</h3>
-                <figure>
+                <figure class="video3">
                     <video preload="none" controls>
                         <source src="videos/pub-mmi1.mp4">
                     </video>
@@ -110,7 +114,7 @@
             </article>
             <article>
                 <h3>Vidéo YouTube</h3>
-                <figure>
+                <figure class="video4">
                     <iframe src="https://www.youtube.com/embed/-kdaJXjgu8M" width="854" height="480"></iframe>
                     <figcaption>Clip vidéo ayant gagné un prix au festival MMI</figcaption>
                 </figure>
