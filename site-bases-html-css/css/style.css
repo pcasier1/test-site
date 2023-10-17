@@ -177,8 +177,8 @@ input[type=submit] {
     background-color: none;
 }
 
-input:invalid{
-    background-color: rgba(255,0,0,0.1);
+input:invalid {
+    background-color: rgba(255, 0, 0, 0.1);
 }
 
 .boutonSimple {
@@ -188,10 +188,36 @@ input:invalid{
     font-size: 16px;
     padding: 10px;
 }
+
 button[type=submit]:active,
 input[type=submit]:active {
-    box-shadow: 5px 3px 3px rgba(0,0,0,0.5);
+    box-shadow: 5px 3px 3px rgba(0, 0, 0, 0.5);
 }
+
 .bouttonComplexe {
     border-radius: 100%;
+}
+
+/*------------------------------------video---------------------------------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Work+Sans:wght@300;400&display=swap');
+
+article {
+    font-family: 'Montserrat';
+}
+
+article>h3 {
+    margin: 0px;
+}
+
+article figcaption {
+    font-size: 14px;
+    font-style: italic;
+    text-align: center;
+}
+
+figure {
+    border: 4px #e6007e;
+    margin-left: 0px;
+    margin-right: 0px;
 }
