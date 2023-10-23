@@ -221,3 +221,69 @@ figure {
     margin-left: 0px;
     margin-right: 0px;
 }
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+/* bordure */
+h1 {
+    border: 2px solid red;
+}
+
+nav ul {
+    border: 2px solid blue;
+}
+
+nav li {
+    border: 6px solid green;
+}
+
+nav a {
+    border: 3px solid orange;
+}
+
+figure {
+    border:2px solid black;
+}
+figcaption {
+    border:2px solid yellow;
+}
+label {
+    border: 2px solid pink;
+}
+input {
+    border: 2px solid aqua;
+}
+
+/**************** header **********************/
+
+header{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+/**************** menu ***********************/
+
+nav ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: flex-start;
+}
+
+/**************** galerie ********************/
+.galerie{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    align-items: flex-start;
+}
+.galerie figure{
+    width: 20%;
+    box-sizing: border-box;
+}
+.galerie img{
+    width: 100%;
+}
+/**************** formulaire *****************/
