@@ -1,0 +1,93 @@
+body {
+    margin: 0;
+    padding: 0 30px;
+    box-sizing: border-box;
+    min-height: 100vh;
+    font-family: raleway;
+    background-image: repeating-linear-gradient(rgba(0, 0, 0, 0.0) 0px 2px,rgba(0, 0, 100, 0.2) 2px 3px),
+    repeating-linear-gradient(90deg,rgba(0, 0, 0, 0.0) 0px 2px, rgba(0, 0, 100, 0.2)2px 3px);
+}
+
+header{
+    display:flex;
+    justify-content:center;
+    background: linear-gradient(to right,rgb(72,81,169), rgb(241,91,54) 80%, rgb(221,63,67));
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+h1{
+    font-size:2rem;
+    margin:1rem 0;
+}
+.galerie {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: center;
+    justify-content:space-around;
+    margin-top: 50px;
+    gap: 30px 15px;
+}
+
+.galerie img {
+    width:100%;
+    display: block;
+}
+
+.transition {
+    transition: 1s;
+}
+
+/* polaroïd */
+.polaroid::before{
+    content: url(images/scotch.webp);
+    display: flex;
+    transform: rotate(-45deg);
+    opacity: 0.5;
+}
+.polaroid::after{
+    content: url(images/scotch.webp);
+}
+/* cadre bois */
+
+/* cadre néon */
+
+/* clip-path  */
+
+.mask-polygon {
+    background: white;
+}
+
+/* mask */
+
+
+/* gestion du responsive */
+@media screen and (min-width:640px) {
+    .galerie {
+        grid-template-columns: 250px 250px;
+
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .galerie {
+        grid-template-columns: repeat(3, 250px);
+    }
+    h1 {
+        font-size: 3rem;
+    }
+
+}
+
+@media screen and (min-width:1680px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    .galerie {
+        grid-template-columns: repeat(4, 250px);
+
+    }
+} 
