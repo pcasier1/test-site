@@ -41,23 +41,87 @@ h1{
 }
 
 /* polaroïd */
+.polaroid{
+    border: 1rem solid white;
+    border-bottom: 3.75rem solid white;
+    position: relative;
+}
+
 .polaroid::before{
     content: url(images/scotch.webp);
-    display: flex;
+    display: block;
     transform: rotate(-45deg);
     opacity: 0.5;
+    top: -35.5px;
+    left: -68px;
+    position: absolute;
 }
 .polaroid::after{
     content: url(images/scotch.webp);
+    display: block;
+    position: absolute;
+    transform: rotate(-45deg);
+    right : -68px;
+    bottom : -77.5px;
+    opacity: 0.5;
 }
+
+.polaroid1{
+    filter: grayscale(1);
+}
+.polaroid1:hover{
+    filter: none;
+}
+.polaroid2{
+    filter: sepia(1);
+}
+.polaroid2:hover{
+    filter: none;
+}
+
 /* cadre bois */
+
+.cadre-bois{
+    border: 1.875rem solid white;
+    border-image-source: url(images/cadre-bois.webp);
+    border-image-slice: 49;
+    border-image-repeat: repeat;
+}
 
 /* cadre néon */
 
+.cadre-neon{
+    border-top: 1.875rem solid white;
+    border-left: 1.875rem solid white;
+    border-right: 2.406rem solid white;
+    border-bottom: 2.656rem solid white;
+    border-image-source: url(images/cadre-neon.webp);
+    border-image-slice: 30 35.8 42.5 30;
+}
+.neon1{
+    filter: blur(1px);
+}
+.neon1:hover{
+    filter: none;
+}
+.neon2{
+    filter: none;
+}
+.neon2:hover{
+    filter: brightness(1.75);
+}
+
 /* clip-path  */
+.mask-circle{
+    clip-path: circle(30%); 
+}
+.mask-circle:hover{
+    clip-path: circle(70%);
+}
 
 .mask-polygon {
     background: white;
+    padding: 1.25rem;
 }
 
 /* mask */
