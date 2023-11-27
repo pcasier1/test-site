@@ -1,0 +1,171 @@
+/* mise en forme génerale */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(to bottom, #000080, #0000CD);
+    color: white;
+    min-height:100vh;
+    margin:0;
+    padding:1rem;   
+}
+
+h1 {
+    margin: 1.5rem;
+    font-size: 3rem;
+}
+
+h2 {
+    margin: 1em;
+    font-size: 2rem;
+}
+
+section {
+    padding: 0 25px;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.section-content {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 70px;
+    justify-content: space-between;
+}
+
+section+section {
+    margin-top: 30px;
+}
+
+article {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+}
+
+/* Ecrire les titres h2 de class .vertical-text en vertical */
+h2.vertical-text{
+    writing-mode:vertical-lr;
+    text-shadow:rgba(255, 255, 255, 0.8);
+    rotate: 180deg;
+}
+
+
+/* appliquer les transformations pour déplacer, tourner, mettre à l'échelle les images de Kermit*/
+article .translate{
+    translate: 20px -50px;
+}
+
+div .rotate-1{
+    transform-origin: bottom left;
+    rotate: -45deg;
+}
+div .rotate-2{
+    transform-origin: top right;
+    rotate: 90deg;
+}
+div .scale-1{
+    position: relative;
+    transform-origin: bottom center;
+    scale: 0.6;
+}
+div .scale-2{
+    position: relative;
+    transform: translateX(-100%);
+    transform-origin: bottom center;
+    scale: 1.25;
+    z-index: -1;
+}
+
+/* gestion du bouton "se dépliant" */
+
+.toggle-button {
+    appearance: none;
+    border: none;
+    padding: 20px 10px 20px 60px;
+    background: #6225E6;
+    font-weight: bold;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+.toggle-button>span {
+    font-family: inherit;
+    font-size: 2rem;
+    margin-right: 10px;
+}
+g path.arrow.one{
+    fill: snow;
+}
+g path.arrow.two{
+    
+}
+
+
+/* transition en jouant sur les timing functions */
+
+.transition-timing {
+    clip-path: circle(25% at 50% 68%);
+}
+.transition-timing:hover {
+    clip-path: circle(150%);    
+}
+
+/* gestion  de 2 transitions  */
+.transition-double {
+    opacity: 0.5;
+    scale:0.5;
+}
+.transition-double:hover {
+    opacity:1;
+    scale:1.1;
+}
+
+/* gestion du menu déroulant*/
+.menu-deroulant { /* element ul principal */
+    /* Menu principal */
+    list-style-type: none;
+    display: flex;
+    align-self: flex-start;
+}
+
+.menu-deroulant span { /* texte des menus principaux */ 
+    display: block;
+    padding: 10px 20px;
+}
+
+.menu-deroulant a { /* lien des sous-menus */
+    color: white;
+    text-decoration: none;
+}
+
+.menu-deroulant>li {/* Item menu niveau 1 */
+    text-align: center;
+    background: #6225E6;
+    color: white;
+    font-size: 1.25rem;
+    position: relative;
+}
+.menu-deroulant>li:not(:first-child) {
+        border-left: 1px solid white;
+}
+
+.menu-deroulant ul {/* sous-menu */
+    list-style-type: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 0;  
+}
+.menu-deroulant ul li { /*items de menu niveau  2 */
+    background-color: #6225E6;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-top: 1px solid white;
+}
