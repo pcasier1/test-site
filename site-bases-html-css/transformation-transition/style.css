@@ -140,10 +140,15 @@ span+svg{
 .transition-double {
     opacity: 0.5;
     scale:0.5;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
 }
 .transition-double:hover {
     opacity:1;
     scale:1.1;
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.1, 1.26, .36,1.53);
+
 }
 
 /* gestion du menu déroulant*/
