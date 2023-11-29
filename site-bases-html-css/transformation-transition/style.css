@@ -98,20 +98,41 @@ div .scale-2{
     font-size: 2rem;
     margin-right: 10px;
 }
-g path.arrow.one{
-    fill: snow;
+.arrow.one{
+    fill: white;
 }
-g path.arrow.two{
-    
+.arrow.two{
+    fill: red;
+    transform: translateX(-30%);
 }
 
 
+.arrow.three{
+    fill: yellow;
+    transform: translateX(-60%);
+}
+
+button{
+    transform:skew(15deg);
+}
+span+svg{
+    transform: skew(-15deg);
+}
+.toggle-button:hover .arrow{
+    transform: none;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+}
 /* transition en jouant sur les timing functions */
 
 .transition-timing {
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.1, 1.26, .36,1.53);
     clip-path: circle(25% at 50% 68%);
 }
 .transition-timing:hover {
+    transition-duration: 2s;
+    transition-timing-function: cubic-bezier(.29, 1.01, 1, -0.68);
     clip-path: circle(150%);    
 }
 
